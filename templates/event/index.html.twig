@@ -1,0 +1,97 @@
+{# event/index.html.twig #} {% extends 'base.html.twig' %} {% block title
+%}Events{% endblock %} {% block body %}
+<!-- Hero Section -->
+<section
+  class="hero-section vh-100 d-flex justify-content-center align-items-center"
+>
+  <div class="container" style="max-height: 300px; overflow: auto">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Welcome to our Events Page</h1>
+        <p>Find various types of events happening around you.</p>
+      </div>
+    </div>
+    <!-- Menu -->
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <div class="list-group">
+          <a
+            href="{{ path('app_event_index') }}"
+            class="list-group-item list-group-item-action"
+            >All Events</a
+          >
+          <a
+            href="{{
+              path('app_event_filter_by_type', { eventType: 'music' })
+            }}"
+            class="list-group-item list-group-item-action"
+            >Music Events</a
+          >
+          <a
+            href="{{ path('app_event_filter_by_type', { eventType: 'art' }) }}"
+            class="list-group-item list-group-item-action"
+            >Art Events</a
+          >
+          <a
+            href="{{
+              path('app_event_filter_by_type', { eventType: 'movie' })
+            }}"
+            class="list-group-item list-group-item-action"
+            >Movies Events</a
+          >
+          <a
+            href="{{
+              path('app_event_filter_by_type', { eventType: 'sport' })
+            }}"
+            class="list-group-item list-group-item-action"
+            >Sport Events</a
+          >
+          <a
+            href="{{
+              path('app_event_filter_by_type', { eventType: 'theater' })
+            }}"
+            class="list-group-item list-group-item-action"
+            >Theater Events</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row row-cols-3 p-2">
+  {% for event in events %}
+  <div class="col event-item" data-type="{{ event.type }}">
+    <div class="card" style="width: 18rem">
+      <img
+        src="{{ asset('uploads/' ~ event.picture) }}"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ event.name }}</h5>
+        <p class="card-text">
+          Date Time:
+          {{ event.dateTime ? event.dateTime|date('Y-m-d H:i:s') : '' }}
+        </p>
+        <p class="card-text">Event Type: {{ event.type }}</p>
+        <p class="card-text">Event Address: {{ event.address }}</p>
+        <a
+          href="{{ path('app_event_show', { id: event.id }) }}"
+          class="btn btn-primary"
+          >Show</a
+        >
+        <a
+          href="{{ path('app_event_edit', { id: event.id }) }}"
+          class="btn btn-warning"
+          >Edit</a
+        >
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <p class="card-text">No records found</p>
+  {% endfor %}
+</div>
+
+{% endblock %}
