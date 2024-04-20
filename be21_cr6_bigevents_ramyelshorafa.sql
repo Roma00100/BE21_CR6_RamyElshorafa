@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2024 at 09:07 PM
+-- Generation Time: Apr 20, 2024 at 12:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -49,14 +49,12 @@ CREATE TABLE `event` (
 
 INSERT INTO `event` (`id`, `name`, `date_time`, `description`, `picture`, `capacity`, `contact_email`, `contact_number`, `address`, `url`, `type`) VALUES
 (11, 'Concert Night', '2024-05-01 19:00:00', 'Enjoy a night of live music and entertainment!', 'music.jpg', 200, 'info@example.com', '1234567890', '123 Main St, Anytown, 12345', 'http://example.com/concert-night', 'music'),
-(14, 'Theater Play', '2024-05-04 20:00:00', 'Experience the magic of live theater!', 'theater.jpg', 300, 'tickets@example.com', '7894561230', '101 Maple St, Anytown, 45678', 'http://example.com/theater-play', 'theater'),
 (15, 'Art Exhibition', '2024-05-05 10:00:00', 'Explore stunning artworks by local artists!', 'picture.jpg', 100, 'info@example.com', '123456789', '202 Pine St, Anytown, 56789', 'http://example.com/art-exhibition', 'art'),
 (16, 'Fitness Workshop', '2024-05-06 09:00:00', 'Get fit and healthy with expert trainers!', 'sport.jpg', 50, 'fitness@example.com', '9876543210', '303 Oak St, Anytown, 67890', 'http://example.com/fitness-workshop', 'sport'),
 (17, 'Cooking Class', '2024-05-07 14:00:00', 'Learn to cook delicious meals from professional chefs!', 'picture.jpg', 80, 'chef@example.com', '1234567890', '404 Cedar St, Anytown, 78901', 'http://example.com/cooking-class', 'cooking'),
 (18, 'Photography Exhibition', '2024-05-08 11:00:00', 'Discover breathtaking photos by talented photographers!', 'picture.jpg', 120, 'photography@example.com', '7890123456', '505 Birch St, Anytown, 89012', 'http://example.com/photography-exhibition', 'photography'),
 (19, 'Tech Conference', '2024-05-09 08:30:00', 'Explore the latest trends in technology and innovation!', 'picture.jpg', 300, 'tech@example.com', '2345678901', '606 Oak St, Anytown, 90123', 'http://example.com/tech-conference', 'technology'),
 (27, 'house music party', '1111-11-11 11:11:00', 'dj gutte play', 'music.jpg', 1500, 'ramy_shorafa@hotmail.com', '6607804540', 'Tanbruckgasse 29', NULL, 'music'),
-(28, 'Theater Play 1', '2024-05-04 20:00:00', 'Experience the magic of live theater!', 'theater.jpg', 300, 'tickets1@example.com', '7894561230', '101 Maple St, Anytown, 45678', 'http://example.com/theater-play1', 'theater'),
 (29, 'Music Concert 1', '2024-05-10 18:00:00', 'Enjoy live music performances!', 'music.jpg', 200, 'tickets2@example.com', '9876543210', '202 Oak St, Anytown, 45678', 'http://example.com/music-concert1', 'music'),
 (30, 'Art Exhibition 1', '2024-05-15 12:00:00', 'Explore stunning artworks!', 'picture.jpg', 150, 'tickets3@example.com', '1234567890', '303 Elm St, Anytown, 45678', 'http://example.com/art-exhibition1', 'art');
 
